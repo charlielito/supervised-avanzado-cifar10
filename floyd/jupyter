@@ -1,0 +1,14 @@
+#! /bin/bash
+set -e
+network_name=$(python -c "import name; print(name.network_name)")
+floyd init german-traffic-signs/$network_name/jupyter
+
+data_output_id=$(cat floyd/ids.yml | shyaml get-value data.output)
+model_output_id=$(cat floyd/ids.yml | shyaml get-value train.output)
+
+floyd run \
+  --cpu \
+  --env tensorflow:py2 \
+  --data $data_output_id:data \
+  --data $model_output_id:model \
+  --mode jupyter
