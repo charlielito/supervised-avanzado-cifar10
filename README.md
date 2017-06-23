@@ -6,7 +6,7 @@ El [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) es un conjunto de 600
 
 ![alt text][s11] ![alt text][s21] ![alt text][s31] ![alt text][s41] ![alt text][s51] ![alt text][s61] ![alt text][s71] ![alt text][s81] ![alt text][s91] ![alt text][s101]
 
-El reto es construir un clasificador de imágenes que sea capaz de reconocer las 39 personas.
+El reto es construir un clasificador de imágenes que sea capaz de reconocer las 10 categorías.
 
 ### Ranking
 Ver [ranking](https://github.com/charlielito/supervised-avanzado-cifar10/blob/master/ranking.md).
