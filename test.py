@@ -36,7 +36,7 @@ inputs = SupervisedInputs(
 
 # create model template
 template = Model(
-    n_classes = 43,
+    n_classes = 10,
     name = network_name,
     model_path = model_path,
     graph = graph,
