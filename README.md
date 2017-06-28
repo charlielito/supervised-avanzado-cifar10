@@ -8,9 +8,6 @@ El [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) es un conjunto de 600
 
 El reto es construir un clasificador de imágenes que sea capaz de reconocer las 10 categorías.
 
-### Ranking
-Ver [ranking](https://github.com/charlielito/supervised-avanzado-cifar10/blob/master/ranking.md).
-
 ### Objetivo
 1. Crear un algoritmo que tome una imagen de entrada, ya sea como vector o matriz, y retorne el clase (`class_id`) a la que pertenece esa imagen.
 1. Entrenar este algoritmo utilizando los datos de la carpeta `data/training-set`.
@@ -59,7 +56,7 @@ Se utilizó una Red Neuronal Convolucional con la siguiente arquitectura:
 * Flatten: se convierte a vector de 43 dimensiones
 * Softmax: funcion de activacion softmax directamente sobre flatten
 
-###### Parametros
+###### Parámetros
 Este modelo utiliza `757,483` parametros.
 
 ##### Entrenamiento
@@ -95,7 +92,7 @@ python test.py
 Resultado: **0.7787**
 
 
-### Visualizacion
+### Visualización
 El cuaderno de jupyter `solucion.ipynb` incluye visualizaciones de algunos resultados, para verlo ejecuta el comando
 ```bash
 jupyter notebook .
