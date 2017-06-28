@@ -23,7 +23,7 @@ donde `n_aciertos` es el numero de imagenes clasificadas de forma correcta y `n_
 ### Requerimientos
 Clona este repositorio y ejecuta el commando
 ```bash
-git checkout red-mediana
+git checkout red-fire
 ```
 Despues puedes instalar los requirementos fácilmente utilizando el commando
 
