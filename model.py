@@ -36,7 +36,7 @@ class Model(SoftmaxClassifier):
         net = tf.layers.conv2d(net, 16, [5, 5], activation=tf.nn.elu, name="elu_1", padding="same")
         # Parameters: 5*5*3*16 =
 
-        net = tf.layers.conv2d(net, 32, [3, 3], activation=tf.nn.elu, strides=2,name="elu_2", padding="same")
+        net = tf.layers.conv2d(net, 32, [5, 5], activation=tf.nn.elu, strides=2,name="elu_2", padding="same")
         #net = tf.layers.max_pooling2d(net, pool_size=2, strides=2, name="max_pool_1", padding="same")
         # Parameters: 5*5*16*32 =
 
@@ -52,11 +52,11 @@ class Model(SoftmaxClassifier):
 
         # dense layers
         net = tf.layers.dense(net, 1024, activation=tf.nn.elu)
-        net = tf.nn.dropout(net, self.inputs.keep_prob)
+        net = tf.layers.dropout(net, rate = 0.5, training = inputs.training)
         # Parameters: 8*8*64*1024 =
 
         net = tf.layers.dense(net, 512, activation=tf.nn.elu)
-        #net = tf.nn.dropout(net, self.inputs.keep_prob)
+        net = tf.layers.dropout(net, rate = 0.5, training = inputs.training)
         # Parameters: 1024*512 =
 
         # output layer

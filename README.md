@@ -23,7 +23,7 @@ donde `n_aciertos` es el numero de imagenes clasificadas de forma correcta y `n_
 ### Requerimientos
 Clona este repositorio y ejecuta el commando
 ```bash
-git checkout red-mediana
+git checkout red_mediana
 ```
 Despues puedes instalar los requirementos fácilmente utilizando el commando
 
@@ -49,12 +49,12 @@ Se utilizó una Red Neuronal Convolucional con la siguiente arquitectura:
 * Capa Convolucional: 64 filtros, kernel 3x3, padding 'same', stride 2, funcion de activacion ELU
 * Capa Convolucional: 64 filtros, kernel 3x3, padding 'same', funcion de activacion ELU
 * Flatten: se aplana a vector
-* Capa Densa: 256 neuronas, activacion ELU, dropout = 0.15
-* Capa Densa: 128 neuronas, activacion ELU
-* Capa Densa Output: 43 neuronal, activacion softmax
+* Capa Densa: 1024 neuronas, activacion ELU, dropout = 0.5
+* Capa Densa: 512 neuronas, activacion ELU, dropout = 0.5
+* Capa Densa Output: 10 neuronas, activacion softmax
 
 ###### Parametros
-Este modelo utiliza `1,156,144` parametros.
+Este modelo utiliza `4,809,904` parametros.
 
 ##### Entrenamiento
 Se utilizó un Stocastic Gradient Descent con los siguentes parámetros
@@ -76,7 +76,7 @@ python train.py
 Este script realiza lo siguiente
 
 * Utiliza `seed = 32` para controlar la aleatoreidad y que los resultados sean reproducibles
-* Entrena el modelo por `6000` iteraciones
+* Entrena el modelo por `16000` iteraciones
 * Graba el modelo en los archivos `basic-conv-net.tf.*`
 
 
@@ -86,7 +86,7 @@ Ver el score del `test-set` ejecuta
 python test.py
 ```
 
-Resultado: **0.930008351803**
+Resultado: **0.694599926472**
 
 
 ### Visualizacion

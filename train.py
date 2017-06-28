@@ -36,7 +36,7 @@ inputs = SupervisedInputs(
 
 # create model template
 template = Model(
-    n_classes = 43,
+    n_classes = 10,
     name = network_name,
     model_path = model_path,
     graph = graph,
@@ -58,7 +58,7 @@ model.initialize()
 print("training")
 model.fit(
     data_generator = data_generator,
-    epochs = 6000,
+    epochs = 16000,
     log_summaries = True,
     log_interval = 10,
     print_test_info = True,
